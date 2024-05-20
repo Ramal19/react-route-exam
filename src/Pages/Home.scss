@@ -1,0 +1,628 @@
+$border-bottom: #f3f3f4;
+$font: "Mukta", sans-serif;
+$icon: #868995;
+$button: #7971ea;
+$fontColor: #fff;
+
+@mixin nav{
+    display: flex;
+    flex-direction: column;
+    font-family: $font;
+    border-bottom: $border-bottom;
+}
+
+@mixin top{
+    
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid $border-bottom;
+    padding: 40px 0;
+}
+
+@mixin button{
+    
+    width: 129px;
+    height: 43px;
+    background-color: $button;
+    color: $fontColor;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: $font
+}
+
+nav{
+
+  @include nav;
+
+  .top{
+    
+    @include top;
+
+    .searchInp{
+        display: flex;
+        align-items: center;
+        color: $icon;
+        gap: 5px;
+
+            input[type="search"]{
+                outline: none;
+                border: none;
+                border-bottom: 2px solid $border-bottom;
+            }
+    }
+    h1{
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      border: 2px solid #000;
+      padding: 0 10px;
+    }
+    
+    ul{
+
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        gap: 10px;
+        color: $icon;
+        position: relative;
+
+        :nth-child(4){
+            position: absolute;
+            top: -15px;
+            right: -18px;
+            color: violet;
+            font-size: 25px;
+        }
+    }
+  }
+  .bottom{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+
+    ul{
+        display: flex;
+        list-style-type: none;
+        gap: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+  }
+}
+
+// HEADER
+
+header{
+
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #A6F4ED;
+    font-family: $font;
+
+    img{
+
+        width: 546px;
+        height: 600px;
+    }
+
+    .text{
+
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h1{
+
+            font-size: 50px;
+        }
+
+        button{
+
+            text-transform: uppercase;
+            @include button;
+        }
+    }
+}
+
+// sectionOne
+
+.sectionOne{
+    
+    padding: 40px 0;
+    border-bottom: 2px solid $border-bottom;
+
+    .icons{
+
+        display: flex;
+        justify-content: space-around;
+
+        .icon{
+
+            display: flex;
+            gap: 15px;
+
+            .i{
+
+                font-size: 50px;
+                color: $button;
+            }
+
+            .text{
+
+                width: 400px;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+    }
+}
+
+// SECTIONTWO
+
+.sectionTwo{
+
+    display: flex;
+    justify-content: center;
+    padding: 90px 0;
+    gap: 20px;
+
+    div{
+
+        width: 320px;
+        height: 400px;
+        background-image: url("https://preview.colorlib.com/theme/shoppers/images/men.jpg.webp");
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 20px;
+        color: orange;
+        font-size: 20px;
+    }
+}
+
+// SECTIONTHREE
+
+.sectionThree{
+
+    width: 100%;
+    // height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    justify-content: space-evenly;
+    padding: 100px 0;
+    background-color: #86899560;
+
+    .top{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+
+        .line{
+
+            width: 100px;
+            height: 2px;
+            border: 1px solid #7971ea;
+        }
+
+        h1{
+
+            font-size: 32px;
+        }
+    }
+
+    .total{
+
+        // width: 700px;
+        // border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 50px;
+
+        .catalogs{
+            width: 320px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            gap: 10px;
+            align-items: center;
+            padding: 20px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            
+            img{
+
+                width: 280px;
+                height: 246px;
+            }
+
+            h1, span{
+
+                color: #7971ea;
+            }
+
+            .btn{
+
+                display: flex;
+                gap: 10px;
+                
+                button{
+
+                    @include button;
+                }
+            }
+        }
+    }
+
+
+}
+
+// SECTION-FORU
+
+.sectionFour{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 0;
+    gap: 10px;
+
+    .line{
+
+        width: 100px;
+        height: 1px;
+        border: 1px solid $button;
+    }
+
+
+    .bottom{
+
+        display: flex;
+        justify-content: center;
+        gap: 140px;
+        margin-top: 40px;
+
+        img{
+
+            width: 634px;
+            height: 423px;
+        }
+
+        .text{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+
+            h1{
+                color: $button;
+            }
+
+            .alt{
+
+                display: flex;
+
+                span{
+
+                    color: $button;
+                }
+            }
+
+            p{
+
+                width: 500px;
+                text-align: center;
+                // padding: 0 200px;
+            }
+            
+            button{
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                @include button;
+            }
+        }
+
+
+    }
+
+}
+
+
+@media(max-width: 1400px){
+
+    .sectionOne{
+
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding: 40px;
+
+        .icons{
+
+            display: flex;
+            flex-direction: column;
+
+            .icon{
+
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .sectionTwo{
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sectionFour{
+
+        display: flex;
+        flex-direction: column;
+
+        .bottom{
+
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    header{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img{
+
+            width: 300px;
+            height: 300px;
+        }
+
+    }
+
+    .sectionOne{
+
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding: 40px;
+
+        .icons{
+
+            display: flex;
+            flex-direction: column;
+
+            .icon{
+
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .sectionTwo{
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sectionFour{
+
+        display: flex;
+        flex-direction: column;
+
+        .bottom{
+
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}   
+
+@media (max-width: 720px){
+
+    
+    header{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img{
+
+            width: 300px;
+            height: 300px;
+        }
+
+    }
+
+    .sectionOne{
+
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding: 40px;
+
+        .icons{
+
+            display: flex;
+            flex-direction: column;
+
+            .icon{
+
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .sectionTwo{
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sectionFour{
+
+        display: flex;
+        flex-direction: column;
+
+        .bottom{
+
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .sectionFour{
+
+        display: flex;
+        flex-direction: column;
+
+        .bottom{
+
+
+            img{
+
+                width: 300px;
+                height: 300px;
+            }
+
+            .text{
+
+                p{
+
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+// @media screen and (min-width : 1400px) {
+//   .container{
+//     max-width: 1320px;
+    
+//   }
+
+//   .parent > div {
+//      width: 49.5%;
+//   }
+// }
+
+// @media (min-width : 1200px) and (max-width : 1400px) {
+//   .container{
+//     max-width: 1140px;
+//   }
+
+//   .parent > div {
+//     width: 49.5%;
+//  }
+// }
+
+// @media (min-width : 992px) and  (max-width : 1200px){
+//   .container{
+//     max-width: 960px;
+//   }
+
+//   .parent{
+//     flex-direction: column;
+//   }
+//   .parent > div {
+//     width: 100%;
+//  }
+
+// }
+
+// @media (min-width : 768px) and (max-width : 992px) {
+//   .container{
+//     max-width: 720px;
+//   }
+
+//   .parent > div {
+//     width:100%;
+//  }
+//  .parent{
+//   flex-direction: column;
+// }
+// .parent-two > .cards {
+//   width: 49%;
+  
+// }
+
+// }
+
+// @media (min-width : 576px) and (max-width : 768px) {
+//   .container{
+//     max-width: 540px;
+//   }
+
+//   .parent > div {
+//     width: 100%;
+//  }
+//  .parent{
+//   flex-direction: column;
+// }
+// .contentWrapper {
+//   width: 100%;
+//   display: flex;
+//  flex-direction: column; 
+// }
+
+// .parent-two > .cards {
+//   width: 49%;
+  
+// }
+// }
+
+
+// @media (max-width : 576px){
+//   .parent > div {
+//     width: 100%;
+//  }
+//  .parent{
+//   flex-direction: column;
+// }
+// .contentWrapper {
+//   width: 100%;
+//   display: flex;
+//  flex-direction: column; 
+// }
+// .parent-two > .cards {
+//   width: 90%;
+  
+// }
+// }
